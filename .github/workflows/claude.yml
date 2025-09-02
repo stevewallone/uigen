@@ -57,7 +57,6 @@ jobs:
 
           claude_args: |
             --model claude-3-5-sonnet-20241022
-            --mcp-config-json '{"mcpServers":{"playwright":{"command":"npx","args":["@microsoft/playwright-mcp@latest"]}}}'
             --allowed-tools Bash(npm:*),Bash(sqlite3:*),mcp__playwright__browser_snapshot,mcp__playwright__browser_click,mcp__playwright__browser_fill,mcp__playwright__browser_navigate,mcp__playwright__browser_assert
 
           additional_permissions: |
