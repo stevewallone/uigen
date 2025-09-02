@@ -56,27 +56,9 @@ jobs:
             You can use sqlite3 for DB queries and Playwright MCP to drive the app.
 
           claude_args: |
-            {
-              "model": "claude-3-5-sonnet-20241022",
-              "mcpServers": {
-                "playwright": {
-                  "command": "npx",
-                  "args": ["@microsoft/playwright-mcp@latest"]
-                }
-              },
-              "permissions": {
-                "allowedTools": [
-                  "Bash(npm:*)",
-                  "Bash(sqlite3:*)",
-                  "mcp__playwright__browser_snapshot",
-                  "mcp__playwright__browser_click",
-                  "mcp__playwright__browser_fill",
-                  "mcp__playwright__browser_navigate",
-                  "mcp__playwright__browser_assert"
-                ]
-              }
-            }
+            --model claude-3-5-sonnet-20241022
+            --mcp-config-json '{"mcpServers":{"playwright":{"command":"npx","args":["@microsoft/playwright-mcp@latest"]}}}'
+            --allowed-tools Bash(npm:*),Bash(sqlite3:*),mcp__playwright__browser_snapshot,mcp__playwright__browser_click,mcp__playwright__browser_fill,mcp__playwright__browser_navigate,mcp__playwright__browser_assert
 
           additional_permissions: |
             actions: read
-
