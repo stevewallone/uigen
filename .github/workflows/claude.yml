@@ -62,7 +62,6 @@ jobs:
                 "playwright": {
                   "command": "npx",
                   "args": [
-                    "-y",
                     "@microsoft/playwright-mcp@latest",
                     "--allowed-origins=localhost:3000;cdn.tailwindcss.com;esm.sh"
                   ]
