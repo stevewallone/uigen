@@ -57,13 +57,11 @@ jobs:
 
           claude_args: |
             {
-              "model": "claude-3-7-sonnet-2025-02-19",
+              "model": "claude-3-5-sonnet-20241022",
               "mcpServers": {
                 "playwright": {
                   "command": "npx",
-                  "args": [
-                    "@microsoft/playwright-mcp@latest"
-                  ]
+                  "args": ["@microsoft/playwright-mcp@latest"]
                 }
               },
               "permissions": {
@@ -81,3 +79,4 @@ jobs:
 
           additional_permissions: |
             actions: read
+
